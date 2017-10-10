@@ -1,25 +1,26 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+<link href="style.css" rel="stylesheet"/>
 </head>
 <body>
-<h3>Student Details</h3>
 <form action="submit.obj">
 		<table border=5px align="center">
 			
 			<tr>
 			<td>
-				Student id
+				Account No
 			</td>
 			<td>	
-				<select id="sid" name="sid">
-					<c:forEach items="${sessionScope.list}" var="studid">
-						<option value="${studid}">${studid}</option>
+				<select id="accNo" name="accNo">
+					<c:forEach items="${sessionScope.list}" var="accountNo">
+						<option value="${accountNo}">${accountNo}</option>
 					</c:forEach>
 				</select>
 			</td>
@@ -27,45 +28,25 @@
 			
 			<tr>
 			<td>
-				Subject name
+				Account type
 			</td>
 			<td>	
-				<select id="subj" name="subj">
-					<option value="subject 1">subject 1</option>
-					<option value="subject 2">subject 2</option>
-					<option value="subject 3">subject 3</option>
-					<option value="subject 4">subject 4</option>
+				<select id="accT" name="accT">
+					<option value="saving">saving</option>
+					<option value="current">current</option>
 				</select>
 			</td>
 			</tr>
 			
 			<tr>
 			<td>
-				Theory scores
+				Amount to be withdrawn
 			</td>
 			<td>
-				<input type="text" name="Tscores" pattern="[0-9]{1,2}" required>
+				<input type="text" name="amount">
 			</td>
 			</tr>
-			
-			<tr>
-			<td>
-				MCQ scores
-			</td>
-			<td>
-				<input type="text" name="Mscores" pattern="[0-9]{1,2}">
-			</td>
-			</tr>
-			
-			<tr>
-			<td>
-				Lab scores
-			</td>
-			<td>
-				<input type="text" name="Lscores" pattern="[0-9]{1,2}">
-			</td>
-			</tr>
-			
+
 			<tr>
 			<td  colspan=2 align=center>
 				<input type="submit" value="submit">

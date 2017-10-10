@@ -1,0 +1,23 @@
+*{
+	font-family:'Segoe UI';
+}
+
+table{
+	align:center;
+	padding: 20px;
+	background-color:#ffbfdf;
+	
+	
+}
+
+a{
+	background-color:black;
+	color:white;
+}
+
+
+h3{
+	
+	background-color: blue;
+	color: white;
+}
